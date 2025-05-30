@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    char c;
+    int so = 0;
+    int chu = 0;
+    int khac = 0;
+
+    printf("Nhap ky tu (ENTER de dung):\n");
+
+    c = getchar();
+
+    while (c != 10) { 
+        if (c >= '0' && c <= '9') {
+            so++;
+        } else if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) {
+            chu++;
+        } else {
+            khac++;
+        }
+
+        c = getchar();
+    }
+
+    printf("So chu so: %d\n", so);
+    printf("So chu cai: %d\n", chu);
+    printf("So ky tu khac: %d\n", khac);
+
+    return 0;
+}
